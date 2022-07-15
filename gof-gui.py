@@ -4,9 +4,9 @@ import life_gui
 
 parser = argparse.ArgumentParser(description="'Game of life' graphic version with arguments.")
 
-parser.add_argument("--rows", default=30)
-parser.add_argument("--cols", default=75)
-parser.add_argument("--max-generations", default=20)
+parser.add_argument("--rows", default=40)
+parser.add_argument("--cols", default=50)
+parser.add_argument("--max-generations", default=50)
 
 args = parser.parse_args()
 

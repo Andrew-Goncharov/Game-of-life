@@ -82,7 +82,8 @@ class GUI(UI):
             clock.tick(self.speed)
         pygame.quit()
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     life = GameOfLife((200, 100), randomize=False, max_generations=50)
     gui = GUI(life)
     gui.run()

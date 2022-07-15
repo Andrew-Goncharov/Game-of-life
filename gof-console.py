@@ -3,9 +3,9 @@ from life import GameOfLife
 import life_console
 
 parser = argparse.ArgumentParser(description='"Game of life" console version with arguments.')
-parser.add_argument("--rows", default=30)
-parser.add_argument("--cols", default=75)
-parser.add_argument("--max-generations", default=20)
+parser.add_argument("--rows", default=20)
+parser.add_argument("--cols", default=40)
+parser.add_argument("--max-generations", default=50)
 
 args = parser.parse_args()
 rows = int(args.rows)

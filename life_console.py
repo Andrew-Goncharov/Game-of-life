@@ -3,13 +3,14 @@ from life import GameOfLife
 from ui import UI
 import time
 
+
 class Console(UI):
     def __init__(self, life: GameOfLife) -> None:
         super().__init__(life)
         self.life = life
 
     def draw_borders(self, screen) -> None:
-        """ Отобразить рамку. """
+        """ Отобразить рамку."""
         y = self.life.rows + 1
         x = self.life.cols + 1
         screen.addstr(1, 1, "+")
@@ -27,7 +28,7 @@ class Console(UI):
         screen.border(0)
 
     def draw_grid(self, screen, grid) -> None:
-        """ Отобразить состояние клеток. """
+        """ Отобразить состояние клеток."""
         for i in range(self.life.rows):
             for j in range(self.life.cols):
                 if grid[i][j] == 1:
@@ -53,7 +54,7 @@ class Console(UI):
         curses.endwin()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     life = GameOfLife((30, 75), max_generations=20)
     ui = Console(life)
     ui.run()
